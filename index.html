@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nithin Senthilkumar — Videographer & Video Editor</title>
+  <meta name="description" content="Videographer & video editor. Cinematic visuals. Real stories." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="media/hero.jpg" media="(min-width: 721px), (orientation: landscape)" />
+  <link rel="preload" as="image" href="media/hero-mobile.jpg" media="(max-width: 720px) and (orientation: portrait)" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="nav-name" data-site="name">Nithin Senthilkumar</a>
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- 1. HERO -->
+    <section class="hero">
+      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+      <div class="hero-shade"></div>
+      <div class="hero-content container">
+        <p class="hero-tagline load" style="--d:.2s" data-site="tagline"></p>
+        <h1 class="hero-name load" style="--d:.35s" data-site="name"></h1>
+        <p class="hero-role load" style="--d:.5s" data-site="role"></p>
+        <div class="hero-actions load" style="--d:.65s">
+          <a href="#work" class="btn btn-solid">View My Work</a>
+          <a href="#contact" class="btn btn-line">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. WORK -->
+    <section class="section work container" id="work">
+      <div class="section-head reveal">
+        <span class="label">Selected Work</span>
+        <span class="label" id="projectCount"></span>
+      </div>
+      <div class="work-grid" id="workGrid"></div>
+    </section>
+
+    <!-- 3. ABOUT -->
+    <section class="section about container" id="about">
+      <div class="about-photo reveal">
+        <img id="portrait" alt="Portrait" loading="lazy" />
+      </div>
+      <div class="about-text">
+        <span class="label reveal">About</span>
+        <h2 class="heading reveal" data-site="aboutHeading"></h2>
+        <p class="body reveal" data-site="aboutText"></p>
+        <p class="label reveal" data-site="location"></p>
+      </div>
+    </section>
+
+    <!-- 4. SERVICES -->
+    <section class="section services container">
+      <div class="section-head reveal">
+        <span class="label">Services</span>
+      </div>
+      <ol class="service-list" id="serviceList"></ol>
+    </section>
+
+    <!-- 5. CONTACT -->
+    <section class="section contact container" id="contact">
+      <span class="label reveal">Contact</span>
+      <h2 class="contact-title reveal">Let's create<br />something.</h2>
+      <dl class="contact-list reveal">
+        <div><dt>Email</dt><dd><a data-link="email"></a></dd></div>
+        <div><dt>Instagram</dt><dd><a data-link="instagram" target="_blank" rel="noopener"></a></dd></div>
+        <div><dt>Phone</dt><dd><a data-link="phone"></a></dd></div>
+      </dl>
+      <a class="btn btn-solid reveal" data-link="email-btn">Get In Touch</a>
+    </section>
+
+  </main>
+
+  <!-- 6. FOOTER -->
+  <footer class="footer container">
+    <span data-site="name"></span>
+    <div class="footer-links">
+      <a data-link="instagram" target="_blank" rel="noopener">Instagram</a>
+      <a data-link="email">Email</a>
+    </div>
+    <span>© 2026</span>
+  </footer>
+
+  <!-- Project player -->
+  <div class="player" id="player" role="dialog" aria-modal="true" aria-label="Project video" hidden>
+    <button class="player-close" id="playerClose" aria-label="Close">Close</button>
+    <div class="player-stage" id="playerStage"></div>
+    <div class="player-caption">
+      <span class="label" id="playerNum"></span>
+      <span class="player-title" id="playerTitle"></span>
+      <span class="label" id="playerCat"></span>
+    </div>
+  </div>
+
+  <script src="js/site.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
