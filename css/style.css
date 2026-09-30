@@ -226,10 +226,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .project-cat { grid-column: 2; font-size: 14px; color: var(--muted); margin-top: 4px; }
 
-/* Featured project — full width, widescreen */
-.project.featured { grid-column: 1 / -1; }
-.project.featured .project-media { aspect-ratio: 16 / 9; }
-.project.featured .project-title { font-size: clamp(28px, 3.4vw, 48px); letter-spacing: -0.025em; }
+/* Featured projects — full width, widescreen (laptop + phone).
+   On tablets (2 columns) they sit in the grid like the others so rows stay even. */
+@media (min-width: 1025px), (max-width: 720px) {
+  .project.featured { grid-column: 1 / -1; }
+  .project.featured .project-media { aspect-ratio: 16 / 9; }
+  .project.featured .project-title { font-size: clamp(28px, 3.4vw, 48px); letter-spacing: -0.025em; }
+}
 
 /* ---------- About ---------- */
 .about {
